@@ -6,7 +6,8 @@ dotenv.config();
  */
 export const subscriptionId = process.env.SUBSCRIPTION_ID;
 export const resourceGroupName = process.env.RESCOURCE_GROUP_NAME;
-export const appserviceName = process.env.APP_SERVICES_NAME;
+export const appServiceName = process.env.APP_SERVICE_NAME;
+export const appServicePlanName = process.env.APP_SERVICE_PLAN_NAME;
 
 /**
  * identity
