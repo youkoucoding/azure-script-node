@@ -43,6 +43,8 @@ Temporary Items
 # Next build dir
 .next/
 
+build/
+
 ### Node ###
 # Logs
 logs

@@ -1,17 +1,17 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["ES7", "ES2018", "ESNext"],
+    "lib": ["ESNext"],
 
-    "module": "commonjs",
-    "rootDir": "./",
+    "module": "NodeNext",
+    "rootDir": "./src",
     "resolveJsonModule": true,
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
 
     "allowJs": true,
-    "outDir": "build",
-
+    "outDir": "build/",
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
 
     /* Type Checking */
     "strict": true,
