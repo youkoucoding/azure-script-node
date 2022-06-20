@@ -1,11 +1,7 @@
-import {
-  getAppServicePlan,
-  appServicePlans_list,
-  appService_configuration,
-} from './modules/appServices';
+import { getAppServicePlan, appService_configuration, webApps_get } from './modules/appServices';
 
-getAppServicePlan().catch(console.error);
+// getAppServicePlan().catch(console.error);
 
-appServicePlans_list().catch(console.error);
+// appService_configuration().catch(console.error);
 
-appService_configuration().catch(console.error);
+webApps_get();

@@ -3,7 +3,7 @@ import { DefaultAzureCredential } from '@azure/identity';
 import { subscriptionId, resourceGroupName, appServicePlanName, appServiceName } from '../config';
 
 const credential = new DefaultAzureCredential();
-const client = new WebSiteManagementClient(credential, subscriptionId as string);
+const client = new WebSiteManagementClient(credential, subscriptionId);
 
 /**
  * This sample demonstrates how to Description for Get an App Service plan.
@@ -18,17 +18,39 @@ export async function getAppServicePlan() {
   console.log(result);
 }
 
-//appServicePlans.list
-export async function appServicePlans_list() {
-  for await (const item of client.appServicePlans.list()) {
-    console.log(item);
-  }
+export async function webApps_get() {
+  await client.webApps.get(resourceGroupName, appServiceName).then((res) => {
+    console.log(res);
+  });
 }
 
 export async function appService_configuration() {
-  const res = await client.webApps.getConfiguration(
-    resourceGroupName as string,
-    appServiceName as string
-  );
-  console.log(res);
+  // const res = await client.webApps.getConfiguration(
+  //   resourceGroupName as string,
+  //   appServiceName as string
+  // );
+  // console.log(await client.getSubscriptionDeploymentLocations());
+  // // console.log(res);
+  // console.log(client.apiVersion);
+}
+
+//webApps.startSlot
+export async function webApps_startSlot() {
+  // await client.webApps.startSlot(resourceGroup, name, soltName).then((res) => {
+  // console.log(res);
+  // });
+}
+
+//webApps.restartSlot
+export async function webApps_restartSlot() {
+  // await client.webApps.restartSlot(resourceGroup, name, soltName).then((res) => {
+  // console.log(res);
+  // });
+}
+
+//webApps.stopSlot
+export async function webApps_stopSlot() {
+  // await client.webApps.stopSlot(resourceGroup, name, soltName).then((res) => {
+  // console.log(res);
+  // });
 }
